@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lễ Tình Nhân Valentine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script>
+      function createHeart(x, y, className) {
+            let heart = document.createElement("div");
+            heart.className = className;
+            heart.innerHTML = "💗";
+            heart.style.left = x + "px";
+            heart.style.top = y + "px";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 2000);
+        }
+        
+        document.onmousemove = function(e) {
+            createHeart(e.clientX, e.clientY - 10, "heart");
+        };
+        
+        document.onclick = function(e) {
+            createHeart(e.clientX - 10, e.clientY - 10, "heart-click");
+        };
+        
+        let followHeart = document.createElement("div");
+        followHeart.className = "heart-follow";
+        followHeart.innerHTML = "💗";
+        document.body.appendChild(followHeart);
+
+        document.onwheel = function(e) {
+            followHeart.style.left = e.clientX + "px";
+            followHeart.style.top = e.clientY + "px";
+        };
+    </script>
+    <div class="popup" id="adPopup">
+        <button class="close-btn" onclick="closePopup()"><b>x</b></button>
+        <img src="qh.gif" width="350">
+        <!-- Nội dung quảng cáo -->
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('adPopup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('adPopup').style.display = 'none';
+        }
+
+        function randomPopup() {
+            showPopup();
+            setTimeout(closePopup, 16000); // tự động đóng sau 5 giây
+        }
+
+        // Hiển thị popup quảng cáo mỗi 10 giây
+        setInterval(randomPopup, 20000);
+    </script>
+    <header>
+        <h1>Lễ Tình Nhân Valentine</h1>
+        <p>Ngày 14 tháng 2 - Ngày của tình yêu và sự quan tâm</p>
+    </header>
+
+    <section id="intro">
+        <h2>Giới Thiệu</h2>
+        <table>
+            <tr>
+                <td>Ngày Valentine, hay còn gọi là Ngày Lễ Tình Nhân, diễn ra vào ngày 14 tháng 2 hằng năm, là dịp đặc biệt để tôn vinh tình yêu và sự gắn kết giữa con người. Xuất phát từ câu chuyện về Thánh Valentine trong thời La Mã cổ đại, ngày này dần trở thành biểu tượng của tình yêu trên toàn thế giới. Vào dịp này, các cặp đôi thường trao nhau những món quà ý nghĩa như hoa hồng, socola và thiệp chúc mừng để bày tỏ tình cảm. Không chỉ giới hạn trong tình yêu đôi lứa, Valentine còn là cơ hội để thể hiện sự quan tâm với gia đình, bạn bè và những người thân yêu.
+ 💖</td>
+        <!-- Thêm hình ảnh cho phần giới thiệu -->
+                <td><img src="anh2.jpg" alt="Ngày Valentine" width="200" height="250"></td>
+        </tr>
+        </table>
+    </section>
+
+    <section id="history">
+        <h2>Lịch Sử Ngày Valentine</h2>
+        <table>
+            <tr>
+                <td>Lễ Valentine bắt nguồn từ một vị thánh tên là Saint Valentine, người sống vào thế kỷ thứ 3 ở Rome. Một truyền thuyết kể rằng, Valentine là một linh mục đã kết hôn cho các cặp đôi yêu nhau mặc dù có lệnh cấm kết hôn của Hoàng đế Claudius II, vì ông cho rằng những người lính chưa kết hôn sẽ chiến đấu tốt hơn. Valentine sau đó bị bắt và xử tử vì hành động này. Ngày lễ Valentine được tổ chức để tưởng nhớ Saint Valentine, người được xem là biểu tượng của tình yêu và lòng dũng cảm.</td>
+        <!-- Thêm hình ảnh về lịch sử -->
+            <td><img src="anh1.jpg" alt="Lịch sử Ngày Valentine" width="315" height="225"></td>
+        </tr>
+        <table>
+    </section>
+
+    <section id="celebration">
+        <h2>Cách Mừng Lễ Tình Nhân</h2>
+        <ul>Ngày nay, Valentine không chỉ dành cho các cặp đôi đang yêu mà còn là dịp để bày tỏ tình cảm với bạn bè, người thân. Các hoạt động phổ biến vào ngày này bao gồm:
+
+<li>Tặng quà: Thường là hoa hồng đỏ, socola, hoặc những món quà lãng mạn.</li>
+<li>Viết thiệp Valentine: Thể hiện tình yêu qua những lời chúc ngọt ngào.</li>
+<li>Các cặp đôi đi ăn tối lãng mạn hoặc du lịch cùng nhau.</li>
+Ở nhiều quốc gia, lễ Valentine đã trở thành một ngày lễ thương mại, nơi các cửa hàng, nhà hàng, và các thương hiệu thường có những chương trình khuyến mãi đặc biệt cho dịp này.
+
+Lễ Valentine cũng có sự đa dạng về cách thức kỷ niệm ở mỗi nền văn hóa, nhưng điểm chung là tình yêu và sự quan tâm dành cho nhau.  
+        </ul>
+        <!-- Thêm video về cách mừng Lễ Tình Nhân -->
+        <div class="video-container">
+            <iframe width="900" height="500" src="vdVLT.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <img src="fb88.gif" width="900" height="150"> 
+        </div>
+        <p>Mua quà cho gấu giá rẻ: <a href="https://pandora.norbreeze.vn/collections/khuyen-mai?utm_source=GG&utm_medium=PaidSearch&utm_campaign=Ecom_AWO&utm_term=BrandKeyword&utm_content=pandora&gad_source=1&gclid=EAIaIQobChMIjuHL4rq-iwMV-Qp7Bx2lLANUEAAYASAAEgJAWvD_BwE" target="_blank">Pandora</a>, <a href="https://www.pnj.com.vn/?gad_source=1&gclid=EAIaIQobChMIjuHL4rq-iwMV-Qp7Bx2lLANUEAAYAyAAEgJ7N_D_BwE" target="_blank">PNJ</a>,...</p>
+    </section>
+    <div class="custom-border2">
+            <p class="center-bold1">Bình luận</p>
+            <form actionn="  " method="POST">
+                <p>Email:</p> <input type="text" name="txtEmail"><Br><br>
+                <p>Bình luận:</p> <textarea name="Comments" rows="5" cols="60"></textarea><Br>
+                <input type="submit" name="cmd" value="Gửi">
+            </form>
+    </div>  
+    <footer>
+        <p>&copy; 2025 Nguyễn Hoàng Long - Lớp 12B1</p>
+    </footer>
+</body>
+</html>

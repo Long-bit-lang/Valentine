@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: pink;
+    color: #333;
+    position: relative;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><text y="20" font-size="20">💗</text></svg>') 16 16, auto;
+}
+
+header {
+    background-color: #ff5c8d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            padding: 20px;
+            background-color: pink;
+            border: 1px solid black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            text-align: center;
+}
+ul {
+    font-size: 23px;
+}
+.close-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: black;
+            color: red;
+            border: none;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            cursor: pointer;
+
+}
+ .heart {
+            position: absolute;
+            font-size: 20px;
+            pointer-events: none;
+            animation: floatUp 1s linear forwards;
+        }
+        .heart-click {
+            position: absolute;
+            font-size: 30px;
+            pointer-events: none;
+            animation: fallDown 2s linear forwards;
+        }
+        .heart-follow {
+            position: absolute;
+            font-size: 25px;
+            pointer-events: none;
+        }
+        @keyframes floatUp {
+            to {
+                transform: translateY(-100px) scale(0.5);
+                opacity: 0;
+            }
+        }
+        @keyframes fallDown {
+            to {
+                transform: translateY(200px) scale(0.5);
+                opacity: 0;
+            }
+        }
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+td {
+    font-size: 23px;
+}
+header p {
+    font-size: 1.2rem;
+}
+p {
+    font-size: 23px;
+}
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ff5c8d;
+}
+
+.video-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ff5c8d;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1rem;
+}
+.custom-border2 {
+    border: 1px solid white;background-color: #FF9999; margin: 1px;padding: 10px;
+}
+p.center-bold1 {
+    text-align: center; font-weight: bold;font-size: 25px;
+} 
+input {
+    border: 3px solid #b1154a;
+}
+textarea {
+    border: 3px solid #b1154a;
+}
